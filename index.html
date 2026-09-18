@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HARMON STORE — Accessoires Tech à Lubumbashi</title>
+<meta name="description" content="HARMON STORE — accessoires téléphones, audio, chargeurs, power banks et gadgets. Livraison à Lubumbashi.">
+<style>
+:root{--gold:#f4b400;--dark:#080808;--dark2:#141414;--white:#fff;--muted:#bdbdbd;--line:#292929}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0b0b0b;color:#fff}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(8,8,8,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:2px;font-size:21px}.brand span{color:var(--gold)}
+.navlinks{display:flex;gap:22px;color:#ddd;font-size:14px}.navlinks a:hover{color:var(--gold)}
+.hero{padding:72px 0 58px;background:radial-gradient(circle at 80% 20%,#382a00 0,transparent 32%),linear-gradient(135deg,#111,#050505)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}.badge{display:inline-block;border:1px solid #6b5200;color:#ffd45a;padding:8px 13px;border-radius:999px;font-size:12px;font-weight:700}
+h1{font-size:clamp(40px,7vw,76px);line-height:.95;margin:18px 0 16px;letter-spacing:-3px}.gold{color:var(--gold)}.hero p{color:#d0d0d0;max-width:620px;font-size:18px;line-height:1.6}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 19px;border-radius:10px;font-weight:800;border:1px solid var(--gold);margin:7px 8px 0 0}.btn-primary{background:var(--gold);color:#080808}.btn-dark{background:#151515;color:#fff}
+.hero-card{background:#101010;border:1px solid #343434;border-radius:24px;padding:30px;box-shadow:0 20px 70px #000}.hero-card .logoH{width:110px;height:110px;border:4px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:58px;font-weight:900;color:var(--gold);margin:auto}.hero-card h2{text-align:center;margin:18px 0 7px}.hero-card p{text-align:center;color:#aaa;font-size:14px}
+section{padding:55px 0}.section-title{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section-title h2{font-size:32px;margin:0}.section-title p{color:#aaa;margin:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.filter{background:#171717;color:#ddd;border:1px solid #303030;border-radius:999px;padding:9px 13px;cursor:pointer}.filter.active,.filter:hover{border-color:var(--gold);color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.product{background:#121212;border:1px solid #2a2a2a;border-radius:16px;overflow:hidden;display:flex;flex-direction:column}.pic{height:155px;background:linear-gradient(145deg,#242424,#0c0c0c);display:grid;place-items:center;font-size:54px}.info{padding:15px}.cat{font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:1px}.product h3{font-size:17px;margin:8px 0}.product p{font-size:13px;color:#aaa;min-height:38px;line-height:1.45}.price{font-size:19px;font-weight:900;margin:12px 0}.order{width:100%;padding:11px;border-radius:9px;border:0;background:var(--gold);font-weight:900;cursor:pointer}
+.about{background:#101010;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.feature{padding:22px;background:#151515;border:1px solid #2b2b2b;border-radius:15px}.feature b{display:block;margin-bottom:8px}.feature span{color:#aaa;font-size:14px;line-height:1.5}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.box{background:#121212;border:1px solid #2a2a2a;border-radius:17px;padding:25px}.box p{color:#aaa;line-height:1.6}.whatsapp{background:#1f5e32;border-color:#2b8c4a}
+footer{padding:30px 0;border-top:1px solid var(--line);color:#888;font-size:13px;text-align:center}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;place-items:center;padding:20px;z-index:50}.modal.show{display:grid}.modalbox{background:#141414;border:1px solid #444;border-radius:18px;padding:24px;width:min(500px,100%)}.modalbox h3{margin-top:0}.close{float:right;background:none;border:0;color:#fff;font-size:25px;cursor:pointer}.modalbox input,.modalbox textarea{width:100%;padding:12px;margin:7px 0 12px;background:#0c0c0c;border:1px solid #333;border-radius:9px;color:#fff}.modalbox label{font-size:12px;color:#aaa}
+@media(max-width:850px){.hero-grid,.contact{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
+@media(max-width:500px){.grid{grid-template-columns:1fr 1fr}.pic{height:125px}.hero{padding-top:45px}.features{grid-template-columns:1fr}.section-title{display:block}.section-title p{margin-top:8px}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+  <div class="brand">HARMON <span>STORE</span></div>
+  <nav class="navlinks"><a href="#produits">Produits</a><a href="#livraison">Livraison</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main>
+<section class="hero"><div class="container hero-grid">
+  <div>
+    <span class="badge">📍 LUBUMBASHI • LIVRAISON LOCALE</span>
+    <h1>Votre technologie,<br><span class="gold">notre priorité.</span></h1>
+    <p>Accessoires de téléphone, audio, chargeurs, power banks et gadgets pratiques. Commandez directement sur WhatsApp.</p>
+    <a class="btn btn-primary" href="#produits">Voir le catalogue</a>
+    <a class="btn btn-dark" href="#contact">Nous contacter</a>
+  </div>
+  <div class="hero-card"><div class="logoH">H</div><h2>HARMON STORE</h2><p>Accessoires & gadgets tech • Lubumbashi</p></div>
+</div></section>
+
+<section id="produits"><div class="container">
+  <div class="section-title"><div><h2>Nos 10 produits</h2><p>Prix de lancement en FC — à confirmer selon le stock disponible.</p></div></div>
+  <div class="filters">
+    <button class="filter active" onclick="filterProducts('all',this)">Tout</button>
+    <button class="filter" onclick="filterProducts('charge',this)">Charge & câbles</button>
+    <button class="filter" onclick="filterProducts('audio',this)">Audio</button>
+    <button class="filter" onclick="filterProducts('energie',this)">Énergie</button>
+    <button class="filter" onclick="filterProducts('protection',this)">Protection</button>
+    <button class="filter" onclick="filterProducts('gadgets',this)">Gadgets</button>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</div></section>
+
+<section class="about" id="livraison"><div class="container">
+  <div class="section-title"><div><h2>Pourquoi HARMON STORE ?</h2><p>Une boutique simple, rapide et locale.</p></div></div>
+  <div class="features">
+    <div class="feature">🚚 <b>Livraison à Lubumbashi</b><span>La livraison est organisée selon votre zone. Les frais peuvent être séparés du prix du produit.</span></div>
+    <div class="feature">📱 <b>Commande WhatsApp</b><span>Choisissez un produit, indiquez la quantité et votre zone : nous confirmons la commande avec vous.</span></div>
+    <div class="feature">✅ <b>Produits contrôlés</b><span>Les accessoires doivent être testés avant mise en vente afin de limiter les produits défectueux.</span></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="container contact">
+  <div class="box"><h2>📞 Contact</h2><p><b>HARMON STORE</b><br>Lubumbashi, Haut-Katanga, RDC<br>Commandes et renseignements sur WhatsApp.</p><a class="btn btn-primary" id="waGeneral" href="#">Commander sur WhatsApp</a></div>
+  <div class="box"><h2>🛵 Livraison</h2><p>Indiquez votre quartier/zone lors de la commande. Nous vous communiquons le coût et le délai de livraison avant confirmation.</p><p><b>Horaires :</b> à définir</p></div>
+</div></section>
+</main>
+
+<footer>© 2026 HARMON STORE — Lubumbashi, RDC • Votre technologie, notre priorité.</footer>
+
+<div class="modal" id="modal"><div class="modalbox">
+  <button class="close" onclick="closeModal()">×</button>
+  <h3 id="modalTitle">Commander</h3>
+  <label>Votre nom</label><input id="name" placeholder="Ex. Harmon">
+  <label>Quantité</label><input id="qty" type="number" min="1" value="1">
+  <label>Quartier / zone à Lubumbashi</label><input id="zone" placeholder="Ex. Kenya, Golf, Katuba...">
+  <label>Message supplémentaire</label><textarea id="note" rows="3" placeholder="Couleur, modèle de téléphone, etc."></textarea>
+  <button class="btn btn-primary" style="width:100%;margin:0" onclick="sendOrder()">Envoyer la commande WhatsApp</button>
+</div></div>
+
+<script>
+const WHATSAPP="243XXXXXXXXX"; // REMPLACE ce numéro par ton vrai numéro WhatsApp
+const products=[
+ {n:"Chargeur rapide Type-C",p:23000,c:"charge",i:"🔌",d:"Chargeur rapide pour smartphones compatibles."},
+ {n:"Câble Type-C",p:9500,c:"charge",i:"⚡",d:"Câble Type-C pour charge et transfert de données."},
+ {n:"Câble Lightning",p:9500,c:"charge",i:"🔗",d:"Câble Lightning pour appareils compatibles."},
+ {n:"Écouteurs Bluetooth",p:30000,c:"audio",i:"🎧",d:"Écouteurs sans fil pour musique et appels."},
+ {n:"Écouteurs filaires",p:9500,c:"audio",i:"🎵",d:"Écouteurs filaires pratiques pour le quotidien."},
+ {n:"Power Bank 10 000 mAh",p:35000,c:"energie",i:"🔋",d:"Batterie externe pour recharger vos appareils."},
+ {n:"Coque téléphone",p:7000,c:"protection",i:"📱",d:"Coque de protection — modèle à préciser."},
+ {n:"Protection écran",p:4500,c:"protection",i:"🛡️",d:"Protection d'écran — modèle à préciser."},
+ {n:"Support téléphone",p:9500,c:"gadgets",i:"🚗",d:"Support téléphone pour voiture ou bureau."},
+ {n:"Adaptateur USB / Type-C",p:12000,c:"gadgets",i:"🔌",d:"Adaptateur pratique pour vos connexions USB et Type-C."}
+];
+let selected="";
+function money(n){return n.toLocaleString("fr-FR")+" FC";}
+function render(list=products){
+ document.getElementById("productGrid").innerHTML=list.map((x,idx)=>`
+ <article class="product"><div class="pic">${x.i}</div><div class="info"><div class="cat">${x.c}</div><h3>${x.n}</h3><p>${x.d}</p><div class="price">${money(x.p)}</div><button class="order" onclick="openModal(${idx})">Commander</button></div></article>`).join("");
+}
+function filterProducts(cat,btn){document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));btn.classList.add("active");render(cat==="all"?products:products.filter(x=>x.c===cat));}
+function openModal(idx){selected=products[idx].n;document.getElementById("modalTitle").textContent="Commander : "+selected;document.getElementById("modal").classList.add("show");}
+function closeModal(){document.getElementById("modal").classList.remove("show");}
+function sendOrder(){
+ const n=document.getElementById("name").value.trim(),q=document.getElementById("qty").value,z=document.getElementById("zone").value.trim(),note=document.getElementById("note").value.trim();
+ const msg=`Bonjour HARMON STORE 👋%0AJe souhaite commander :%0A• Produit : ${encodeURIComponent(selected)}%0A• Quantité : ${encodeURIComponent(q)}%0A• Nom : ${encodeURIComponent(n||"À préciser")}%0A• Zone : ${encodeURIComponent(z||"À préciser")}%0A• Note : ${encodeURIComponent(note||"Aucune")}`;
+ window.open("https://wa.me/"+WHATSAPP+"?text="+msg,"_blank");
+}
+document.getElementById("waGeneral").href="https://wa.me/"+WHATSAPP+"?text=Bonjour%20HARMON%20STORE%20%F0%9F%91%8B%20Je%20souhaite%20commander.";
+render();
+</script>
+</body>
+</html>
