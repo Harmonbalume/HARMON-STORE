@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HARMON STORE</title>
+<style>
+body{margin:0;background:#0b0b0b;color:#fff;font-family:Arial,sans-serif}header{padding:18px;text-align:center;border-bottom:1px solid #c9a227}.gold{color:#d7b33b}.hero{text-align:center;padding:40px 18px}.btn{display:inline-block;background:#d7b33b;color:#111;border:0;border-radius:8px;padding:12px 16px;margin:6px;font-weight:bold;text-decoration:none;cursor:pointer}.container{max-width:1000px;margin:auto;padding:20px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}.card{background:#151515;border:1px solid #292929;border-radius:12px;padding:16px}.icon{font-size:42px;text-align:center;padding:18px}.price{color:#d7b33b;font-weight:bold;font-size:19px;margin:10px 0}p{color:#ccc}.info{text-align:center;background:#151515;padding:22px;border-radius:12px;margin-top:30px}footer{text-align:center;padding:25px;color:#888;border-top:1px solid #222;margin-top:30px}
+</style></head><body>
+<header><strong>HARMON <span class="gold">STORE</span></strong><br><small>Votre technologie, notre priorité.</small></header>
+<section class="hero"><h1>HARMON <span class="gold">STORE</span></h1><p>Accessoires de téléphone à Lubumbashi</p><p>📍 Lubumbashi • 🚚 Livraison locale</p><a class="btn" href="#catalogue">Voir le catalogue</a><a class="btn" target="_blank" rel="noopener" href="https://wa.me/243841319651?text=Bonjour%20HARMON%20STORE%2C%20je%20souhaite%20avoir%20des%20informations.">Nous contacter</a></section>
+<div class="container" id="catalogue"><h2>Catalogue</h2><div class="grid" id="products"></div>
+<div class="info"><h2>Commander</h2><p>Commande directe par WhatsApp</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/243841319651?text=Bonjour%20HARMON%20STORE%2C%20je%20souhaite%20passer%20une%20commande.">📲 Commander sur WhatsApp</a></div></div>
+<footer>© 2026 HARMON STORE — Lubumbashi</footer>
+<script>
+const WHATSAPP="243841319651";
+const products=[
+["Chargeur rapide Type-C","23 000 FC","🔌","Chargeur rapide USB-C"],
+["Câble Type-C","9 500 FC","🔗","Câble USB-C"],
+["Câble Lightning","9 500 FC","🔗","Câble Lightning"],
+["Écouteurs Bluetooth","30 000 FC","🎧","Écouteurs sans fil"],
+["Écouteurs filaires","9 500 FC","🎧","Écouteurs filaires"],
+["Power Bank 10 000 mAh","35 000 FC","🔋","Batterie externe"],
+["Coque téléphone","7 000 FC","📱","Protection téléphone"],
+["Protection écran","4 500 FC","🛡️","Protection d'écran"],
+["Support téléphone","9 500 FC","📱","Support téléphone"],
+["Adaptateur USB / Type-C","12 000 FC","🔌","Adaptateur USB/Type-C"]
+];
+const box=document.getElementById("products");
+box.innerHTML=products.map((p,i)=>`<article class="card"><div class="icon">${p[2]}</div><h3>${p[0]}</h3><p>${p[3]}</p><div class="price">${p[1]}</div><button class="btn" onclick="order(${i})">Commander</button></article>`).join("");
+function order(i){
+ const p=products[i];
+ const msg=`Bonjour HARMON STORE 👋%0A%0AJe souhaite commander : ${encodeURIComponent(p[0])}%0APrix : ${encodeURIComponent(p[1])}%0AQuantité : 1%0ALivraison : Lubumbashi`;
+ window.location.href=`https://wa.me/${WHATSAPP}?text=${msg}`;
+}
+</script></body></html>
